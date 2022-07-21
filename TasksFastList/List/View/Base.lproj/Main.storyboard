@@ -31,8 +31,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Список" id="G1X-QT-4Qu">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fiY-MC-V4P"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fiY-MC-V4P">
+                            <connections>
+                                <action selector="addNewNote:" destination="M7G-5d-ZV4" id="YbT-rr-nKv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="navigationBar" destination="G1X-QT-4Qu" id="I74-bW-MDt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X21-g9-ZEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
