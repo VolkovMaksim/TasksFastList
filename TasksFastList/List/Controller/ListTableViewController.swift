@@ -150,6 +150,7 @@ class ListTableViewController: UITableViewController {
             listOfNotes[indexPath.row].index = Int16(indexPath.row)
             let attributeString = NSMutableAttributedString(string: (cell.textLabel?.text)!)
             attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 0, range: NSMakeRange(0, attributeString.length))
+            cell.textLabel?.textColor = .black
             cell.textLabel?.attributedText = attributeString
             saveContext()
             return cell
@@ -158,6 +159,7 @@ class ListTableViewController: UITableViewController {
             listOfNotes[indexPath.row].index = Int16(indexPath.row)
             let attributeString = NSMutableAttributedString(string: (cell.textLabel?.text)!)
             attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+            cell.textLabel?.textColor = .lightGray
             cell.textLabel?.attributedText = attributeString
             saveContext()
             return cell
@@ -201,6 +203,7 @@ class ListTableViewController: UITableViewController {
             listOfNotes[destinationIndexPath.row].index = Int16(destinationIndexPath.row)
             let attributeString = NSMutableAttributedString(string: element.name!)
             attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+            tableView.cellForRow(at: destinationIndexPath)?.textLabel?.textColor = .lightGray
             tableView.cellForRow(at: destinationIndexPath)?.textLabel?.attributedText = attributeString
             tableView.cellForRow(at: destinationIndexPath)?.textLabel?.text = listOfNotes[destinationIndexPath.row].name
         } else {
@@ -208,6 +211,7 @@ class ListTableViewController: UITableViewController {
             listOfNotes.insert(element, at: destinationIndexPath.row)
             let attributeString = NSMutableAttributedString(string: element.name!)
             attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 0, range: NSMakeRange(0, attributeString.length))
+            tableView.cellForRow(at: destinationIndexPath)?.textLabel?.textColor = .black
             tableView.cellForRow(at: destinationIndexPath)?.textLabel?.attributedText = attributeString
             tableView.cellForRow(at: destinationIndexPath)?.textLabel?.text = listOfNotes[destinationIndexPath.row].name
         }
@@ -248,6 +252,7 @@ class ListTableViewController: UITableViewController {
                 // создаем атрибут для зачеркивания текста
                 let attributeString = NSMutableAttributedString(string: self.listOfNotes[indexPath.row].name!)
                 attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+                self.tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .lightGray
                 self.tableView.cellForRow(at: indexPath)?.textLabel?.attributedText = attributeString
                 // меняем значение Done на true
                 self.listOfNotes[indexPath.row].done = true
@@ -266,6 +271,7 @@ class ListTableViewController: UITableViewController {
                 // сбрасываем зачеркивание ячейки
                 let attributeString = NSMutableAttributedString(string: self.listOfNotes[indexPath.row].name!)
                 attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 0, range: NSMakeRange(0, attributeString.length))
+                self.tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .black
                 self.tableView.cellForRow(at: indexPath)?.textLabel?.attributedText = attributeString
                 completion(true)
                 // сохраняем контекст (сохраняем значение Done в контексте)
