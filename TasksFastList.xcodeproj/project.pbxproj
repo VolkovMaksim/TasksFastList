@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		37DC71E0288958A7001E0A8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC71DF288958A7001E0A8A /* AppDelegate.swift */; };
 		37DC71E2288958A7001E0A8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC71E1288958A7001E0A8A /* SceneDelegate.swift */; };
-		37DC71E4288958A7001E0A8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC71E3288958A7001E0A8A /* ViewController.swift */; };
 		37DC71E7288958A7001E0A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DC71E5288958A7001E0A8A /* Main.storyboard */; };
 		37DC71EA288958A7001E0A8A /* TasksFastList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37DC71E8288958A7001E0A8A /* TasksFastList.xcdatamodeld */; };
 		37DC71EC288958A8001E0A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DC71EB288958A8001E0A8A /* Assets.xcassets */; };
 		37DC71EF288958A8001E0A8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DC71ED288958A8001E0A8A /* LaunchScreen.storyboard */; };
+		37DC720028895B7D001E0A8A /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC71FF28895B7D001E0A8A /* ListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37DC71DC288958A7001E0A8A /* TasksFastList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasksFastList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DC71DF288958A7001E0A8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37DC71E1288958A7001E0A8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		37DC71E3288958A7001E0A8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		37DC71E6288958A7001E0A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37DC71E9288958A7001E0A8A /* TasksFastList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksFastList.xcdatamodel; sourceTree = "<group>"; };
 		37DC71EB288958A8001E0A8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37DC71EE288958A8001E0A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37DC71F0288958A8001E0A8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37DC71FF28895B7D001E0A8A /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +58,88 @@
 		37DC71DE288958A7001E0A8A /* TasksFastList */ = {
 			isa = PBXGroup;
 			children = (
-				37DC71DF288958A7001E0A8A /* AppDelegate.swift */,
-				37DC71E1288958A7001E0A8A /* SceneDelegate.swift */,
-				37DC71E3288958A7001E0A8A /* ViewController.swift */,
-				37DC71E5288958A7001E0A8A /* Main.storyboard */,
-				37DC71EB288958A8001E0A8A /* Assets.xcassets */,
-				37DC71ED288958A8001E0A8A /* LaunchScreen.storyboard */,
-				37DC71F0288958A8001E0A8A /* Info.plist */,
-				37DC71E8288958A7001E0A8A /* TasksFastList.xcdatamodeld */,
+				37DC71F828895AD8001E0A8A /* App */,
+				37DC71F728895ACD001E0A8A /* List */,
+				37DC71F628895A4D001E0A8A /* Supporting files */,
 			);
 			path = TasksFastList;
+			sourceTree = "<group>";
+		};
+		37DC71F628895A4D001E0A8A /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				37DC71EB288958A8001E0A8A /* Assets.xcassets */,
+				37DC71F0288958A8001E0A8A /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		37DC71F728895ACD001E0A8A /* List */ = {
+			isa = PBXGroup;
+			children = (
+				37DC71FE28895B0C001E0A8A /* Model */,
+				37DC71FB28895AF6001E0A8A /* View */,
+				37DC71FA28895AF0001E0A8A /* Controller */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		37DC71F828895AD8001E0A8A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				37DC71FD28895B04001E0A8A /* Model */,
+				37DC71FC28895AFF001E0A8A /* View */,
+				37DC71F928895AE2001E0A8A /* Controller */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		37DC71F928895AE2001E0A8A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37DC71DF288958A7001E0A8A /* AppDelegate.swift */,
+				37DC71E1288958A7001E0A8A /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37DC71FA28895AF0001E0A8A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37DC71FF28895B7D001E0A8A /* ListTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37DC71FB28895AF6001E0A8A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37DC71E5288958A7001E0A8A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37DC71FC28895AFF001E0A8A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37DC71ED288958A8001E0A8A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37DC71FD28895B04001E0A8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		37DC71FE28895B0C001E0A8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37DC71E8288958A7001E0A8A /* TasksFastList.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37DC71E4288958A7001E0A8A /* ViewController.swift in Sources */,
 				37DC71E0288958A7001E0A8A /* AppDelegate.swift in Sources */,
 				37DC71EA288958A7001E0A8A /* TasksFastList.xcdatamodeld in Sources */,
 				37DC71E2288958A7001E0A8A /* SceneDelegate.swift in Sources */,
+				37DC720028895B7D001E0A8A /* ListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,22 +365,25 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X8852RDP32;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TasksFastList/Info.plist;
+				INFOPLIST_FILE = "TasksFastList/Supporting files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Список";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.rus-volk.TasksFastList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,22 +396,25 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X8852RDP32;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TasksFastList/Info.plist;
+				INFOPLIST_FILE = "TasksFastList/Supporting files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Список";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.rus-volk.TasksFastList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
